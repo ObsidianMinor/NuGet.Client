@@ -16985,6 +16985,33 @@ namespace NuGet.CommandLine {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enbale long path support in local group policy, more details at https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/..
+        /// </summary>
+        public static string Warning_LongPath_DisabledPolicy {
+            get {
+                return ResourceManager.GetString("Warning_LongPath_DisabledPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please install .net Framework 4.6.2 or later to support long path, more details at https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/..
+        /// </summary>
+        public static string Warning_LongPath_UnsupportedNetFramework {
+            get {
+                return ResourceManager.GetString("Warning_LongPath_UnsupportedNetFramework", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Long Path is only supported on windows 10, more details at https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/..
+        /// </summary>
+        public static string Warning_LongPath_UnsupportOS {
+            get {
+                return ResourceManager.GetString("Warning_LongPath_UnsupportOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MsbuildPath : {0} is using, ignore MsBuildVersion: {1}. .
         /// </summary>
         public static string Warning_MsbuildPath {

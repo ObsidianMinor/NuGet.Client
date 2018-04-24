@@ -1,4 +1,4 @@
-﻿// Copyright (c) .NET Foundation. All rights reserved.
+// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
@@ -12,20 +12,12 @@ namespace NuGet.PackageManagement
         {
             if (exception == null)
             {
-                throw new ArgumentNullException("exception");
+                throw new ArgumentNullException(nameof(exception));
             }
 
-            if (exception.InnerException == null)
+            while (exception.InnerException != null)
             {
-                return exception;
-            }
-
-            // Always return the inner exception from a target invocation exception
-            if (exception is AggregateException
-                ||
-                exception is TargetInvocationException)
-            {
-                return exception.GetBaseException();
+                exception = exception.InnerException;
             }
 
             return exception;
